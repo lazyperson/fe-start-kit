@@ -1,0 +1,24 @@
+{
+  "name": "fe-start-kit",
+  "version": "1.0.0",
+  "description": "前端脚手架工具",
+  "main": "index.js",
+  "scripts": {
+    "start": "fe-start-kit init demo2",
+    "debug": "node --inspect index.js init demo3"
+  },
+  "bin": {
+    "fe-start-kit": "index.js"
+  },
+  "author": "wenqiang.li",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "handlebars": "^4.0.12",
+    "inquirer": "^6.2.0",
+    "log-symbols": "^2.2.0",
+    "ora": "^3.0.0"
+  }
+}

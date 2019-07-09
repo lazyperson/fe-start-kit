@@ -1,0 +1,9 @@
+node_modules
+.idea/
+.vscode/
+
+.DS_Store
+
+tsconfig.json
+yarn.lock
+package-lock.json
