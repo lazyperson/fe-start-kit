@@ -1,6 +1,6 @@
 {
   "name": "fe-start-kit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "前端脚手架工具",
   "main": "index.js",
   "scripts": {
