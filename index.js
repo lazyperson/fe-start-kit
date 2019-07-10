@@ -73,7 +73,7 @@ cmder.version(packageJson.version, '-v, --version')
                       const result = handlebars.compile(content)({ preCssType });
                       fs.writeFileSync(fileAppName, result);
 
-                      const otherExt = preCssType === preCssTypeArr[0] ? preCssTypeArr[1] : preCssTypeArr[0];
+                      const otherExt = preCssType.toUpperCase() === preCssTypeArr[0] ? preCssTypeArr[1] : preCssTypeArr[0];
                       const otherCssFile = `${name}/src/App.${otherExt.toLowerCase()}`;
                       if (fs.existsSync(otherCssFile)) {
                         fs.unlinkSync(otherCssFile);

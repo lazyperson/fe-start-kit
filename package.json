@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "fe-start-kit init demo2",
-    "debug": "node --inspect index.js init demo3"
+    "debug": "node --inspect-brk index.js init demo"
   },
   "bin": {
     "fe-start-kit": "index.js"
