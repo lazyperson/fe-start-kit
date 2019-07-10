@@ -13,7 +13,6 @@ const packageJson = require('./package.json');
 const templates = require('./templates');
 const questiones = require('./question');
 
-
 const preCssTypeArr = ['LESS', 'SCSS'];
 
 cmder.version(packageJson.version, '-v, --version')
@@ -31,11 +30,11 @@ cmder.version(packageJson.version, '-v, --version')
       });
       console.log(chalk.green('---------------------------------------------'));
       console.log('\n');
-   
+
       inquirer.prompt(questiones.template(keyArr)).then((ans) => {
         if (templates[ans.template]) {
 
-          inquirer.prompt(questiones.preCssType(preCssTypeArr)).then((cssRes)=>{
+          inquirer.prompt(questiones.preCssType(preCssTypeArr)).then((cssRes) => {
             const preCssType = cssRes.preCssType.toLowerCase();
 
             inquirer.prompt(questiones.mulQuestion).then((answers) => {
@@ -69,18 +68,20 @@ cmder.version(packageJson.version, '-v, --version')
                     }
                     const fileAppName = `${name}/src/App.js`;
                     if (fs.existsSync(fileAppName)) {
+
                       const content = fs.readFileSync(fileAppName).toString();
-                      const result = handlebars.compile(content)({preCssType});
+                      const result = handlebars.compile(content)({ preCssType });
                       fs.writeFileSync(fileAppName, result);
-                      const otherExt = preCssType === preCssTypeArr[0] ?  preCssTypeArr[1] :  preCssTypeArr[0];
-                      const otherCssFile =  `${name}/src/App.${otherExt.toLowerCase()}`;
-                      if(fs.existsSync(otherCssFile)) {
+
+                      const otherExt = preCssType === preCssTypeArr[0] ? preCssTypeArr[1] : preCssTypeArr[0];
+                      const otherCssFile = `${name}/src/App.${otherExt.toLowerCase()}`;
+                      if (fs.existsSync(otherCssFile)) {
                         fs.unlinkSync(otherCssFile);
                       }
                     }
 
                     console.log(symbols.success, chalk.green('项目初始化完成!'));
-  
+
                     //const cmdStr = `cd ${name} && npm install`;
                     // const spinner2 = ora(chalk.green('正在安装依赖...'));
                     // spinner2.start();
@@ -95,7 +96,7 @@ cmder.version(packageJson.version, '-v, --version')
                     //   process.exit();
                     //   exec('npm run start');
                     // })
-  
+
                   }
                 })
               } catch (ex) {
