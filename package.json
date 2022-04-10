@@ -10,7 +10,7 @@
   "bin": {
     "fe-start-kit": "index.js"
   },
-  "author": "wenqiang.li",
+  "author": "lazyperson",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",
