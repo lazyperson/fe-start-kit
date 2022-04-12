@@ -1,24 +1,29 @@
 {
   "name": "fe-start-kit",
-  "version": "1.0.2",
-  "description": "前端脚手架工具",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "front-end development template",
+  "main": "./bin/index.js",
   "scripts": {
-    "start": "fe-start-kit init demo2",
-    "debug": "node --inspect-brk index.js init demo"
+    "start": "fe-start-kit init demo",
+    "debug": "node --inspect-brk ./bin/index.js init demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazyperson/fe-start-kit.git"
   },
   "bin": {
-    "fe-start-kit": "index.js"
+    "fe-start-kit": "./bin/index.js"
   },
   "author": "lazyperson",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "chalk": "^2.4.1",
-    "commander": "^2.19.0",
-    "download-git-repo": "^1.1.0",
-    "handlebars": "^4.0.12",
-    "inquirer": "^6.2.0",
-    "log-symbols": "^2.2.0",
-    "ora": "^3.0.0"
+    "chalk": "^4.1.2",
+    "commander": "^9.1.0",
+    "download-git-repo": "^3.0.2",
+    "fs-extra": "^10.0.1",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.2.2",
+    "log-symbols": "^4.1.0",
+    "ora": "^5.4.1"
   }
 }
