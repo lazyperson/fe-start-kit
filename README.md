@@ -22,8 +22,6 @@ electron           |     OK     |    Electron development template
 electron_react     |     OK     |    Electron development template includes TS, React
 *******************************************************************************
 
-
-
 ? 请选择框架类型 electron_react
 ? 请输入项目描述 用react开发electron项目
 ? 请输入项目关键字 react ts electron
