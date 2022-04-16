@@ -1,6 +1,6 @@
 # fe-start-kit
 
-#### 前端开发脚手架工具
+#### 前端开发脚手架工具  front-end rapid development scaffold
 
 ```
 fe-start-kit init <projectName>
