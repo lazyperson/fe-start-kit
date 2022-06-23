@@ -12,7 +12,7 @@ cmder.version(packageJson.version, '-v, --version')
     });
 
 
-// 模板列表
+// 模板列表帮助
 cmder.command('help')
     .description('查看所有可用命令')
     .action(() => {
