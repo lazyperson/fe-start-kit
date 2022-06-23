@@ -1,11 +1,15 @@
 {
   "name": "fe-start-kit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "front-end development template",
   "main": "./bin/index.js",
   "scripts": {
     "start": "fe-start-kit init demo",
-    "debug": "node --inspect-brk ./bin/index.js init demo"
+    "debug": "node --inspect-brk ./bin/index.js init demo",
+    "release-f": "standard-version -f",
+    "release-major": "standard-version -r major",
+    "release-minor": "standard-version -r minor",
+    "release-patch": "standard-version -r patch"
   },
   "repository": {
     "type": "git",
@@ -25,5 +29,8 @@
     "inquirer": "^8.2.2",
     "log-symbols": "^4.1.0",
     "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
   }
 }
