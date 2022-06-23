@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 'stable'
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: "$GITHUB_TOKEN_LAZYPERSON"
+  on:
+    tags: true
+    draft: false
